@@ -1,0 +1,33 @@
+= Diit GitOps Repository
+
+WARNING: This repository exists to illustrate some concepts to pinpoint discussions around GitOps.
+
+
+This repository is the GitOps Repository for a fictious company called _Diit_. The repository is
+divided in:
+
+* `/charts` directory, used to store all Helm charts using by the GitOps workflow implementation.
+
+* `/runtime` directory, used to store all the workloads that should be managed by the GitOps
+  implementation.
+
+== The `/charts` directory
+
+There are two kinds of charts stored in this directory: 
+
+1. charts that can offer common infrastructure to specific types of workloads (such as for example
+microservices or web applications); and
+1. charts that are specific to a specific application, for cases the developer needs to change
+partially or entirely the application's infrastructure.
+
+== The `/runtime` directory
+
+This directory is used to store the workloads managed by the GitOps implementation. The following
+layout is being used: `/runtime/${PROJECT_NAME}/${WORKLOAD_NAME}.yaml`.
+
+The following is an Application Descriptor example:
+
+[source,yaml]
+----
+include::runtime/diit/web.yaml[]
+----

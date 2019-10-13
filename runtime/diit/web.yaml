@@ -1,0 +1,14 @@
+apiVersion: gitops/v1alpha1
+kind: Application
+metadata:
+  name: diit-web
+  namespace: diit
+spec:
+  chart:
+    name: diit-web
+    version: "0.1.0"
+    values:
+      replicas: 1
+      image:
+        name: diit-web
+        tag: "0.0.1"
