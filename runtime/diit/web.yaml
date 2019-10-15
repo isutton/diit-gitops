@@ -1,5 +1,5 @@
 apiVersion: gitops/v1alpha1
-kind: Application
+kind: Release
 metadata:
   name: diit-web
   namespace: diit
